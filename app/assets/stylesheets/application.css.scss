@@ -5,6 +5,10 @@
 
 @import "bootstrap-sprockets";
 @import "bootstrap";
+@font-face {
+  font-family: 'Proxima Nova';    
+  src: url('/assets/fonts/Proxima Nova');
+}
 
 /****** HTML ******/
 
@@ -15,6 +19,10 @@ html {
 }
 
 /****** Body ******/
+
+.events-label {
+  height: 45px;
+}
 
 body { 
   padding-bottom: 125px;
@@ -46,6 +54,7 @@ width: 100%;
 .buffer {
   height: 50px;
 }
+
 /**** nav *****/
 
 
@@ -279,6 +288,11 @@ width: 100%;
 
 /**** Style for every event *****/
 
+#map {
+  width: 300px;
+  height: 350px;
+}
+
 .events_body_background {
   background-color: #f2f2f2;
   padding-top: 30px;
@@ -318,6 +332,10 @@ width: 100%;
   color: black;
 }
 
+.events_style a:hover {
+  text-decoration: none;
+}
+
 .learn-more-button {
   background-color: #fb502e;
   font-family: Proxima Nova;
@@ -328,12 +346,12 @@ width: 100%;
   width: 300px;
   margin-left: 13%;
   padding-top: 8px;
+    &:hover {
+      background-color: #f12c05;
+      color: white;
+  }
 }
 
-.learn-more-button:hover {
-  background-color: #f12c05;
-  color: white;
-}
 
 .delete-button {
   background-color: #fb502e;
@@ -345,12 +363,12 @@ width: 100%;
   width: 300px;
   margin-left: 13%;
   padding-top: 8px;
+   &:hover {
+    background-color: #f12c05;
+     color: white;
+ }
 }
 
-.delete-button:hover {
-  background-color: #f12c05;
-  color: white;
-}
 
 .edit-button {
   background-color: #fb502e;
@@ -364,16 +382,13 @@ width: 100%;
   padding-top: 8px;
   margin-top: -30px;
   position: relative;
+   &:hover {
+    background-color: #f12c05;
+    color: white;
+ }
 }
 
-.edit-button:hover {
-  background-color: #f12c05;
-  color: white;
-}
 
-.events_style a:hover {
-  text-decoration: none;
-}
 
 #events-description {
   height: 90px;
@@ -387,6 +402,19 @@ width: 100%;
   width: 300px;
   margin-left: 13%;
   overflow: scroll;
+}
+
+.event-submit-btn {
+  margin-top: 8px;
+  background-color: #fb502e;
+  border: none;
+    &:hover {
+      background-color: #f12c05;
+  }
+}
+
+.date-space {
+  margin-top: 8px;
 }
 
 /* FOOTER */
@@ -413,18 +441,9 @@ width: 100%;
   width: 80%;
 }
 
-.fa-facebook-square {
-  color: #354052;
-}
-
-.fa-twitter-square {
-  color: #354052;
-}
-
-.fa-github-square {
-  color: #354052;
-}
-
+.fa-facebook-square,
+.fa-twitter-square,
+.fa-github-square,
 .fa-google-plus-square {
   color: #354052;
 }
