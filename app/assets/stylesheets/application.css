@@ -492,7 +492,8 @@ width: 100%;
 }
 
 .contact-logo {
-  text-align: center;
+  width: 50%;
+  margin: 0 auto;
 }
 
 .contact-info {
@@ -500,11 +501,28 @@ width: 100%;
 }
 
 .contact-map {
-
+  width: 50%;
+  margin: 0 auto;
+  margin-top: 50px;
+  margin-left: 20px;
 }
 
 .contact-email {
-  
+  text-align: center;
+}
+
+.contact-logo {
+  width: 10%;
+  height: auto;
+  margin-right:10px;
+}
+
+.contact-header {
+  text-align:center;
+}
+
+.contact-hr {
+  width: 80%;
 }
 
 
