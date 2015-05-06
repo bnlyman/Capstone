@@ -2,7 +2,12 @@
   <% if user_signed_in? %>
       <%= image_tag "agogesigninhero.jpg", class: 'img-responsive signedinhero', alt: "Responsive image" %>
   <% else %>
-    <div class="col-md-6 signin_form" id="signin_background">
+    <div class="col-md-4 col-md-offset-3 aboutagogehome">
+      <p>What can you<br> 
+         build in a day?</p>
+         <%= image_tag "hrulegray.png" %>
+    </div>
+    <div class="col-md-6" id="signin_background">
       <%= render'devise/registrations/signup_form' %>
     </div>
     <div id="signedouthero"></div>
