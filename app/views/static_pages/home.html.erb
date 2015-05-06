@@ -16,25 +16,15 @@
   <div class="home_paragraph_container">
     <span class="title_home_paragraph">
       <h3>Learn a skill</h3>
-      <p>Agoge, originally known as the school for teaching the <br>
-         brightest minds in the Roman empire, now comes to you <br>
-         in the form of the best coding day camp for children 
-         to ever exist!
+      <p>The agoge, where the legendary training of elite Spartan warriors began,<br> held
+         to the belief that an individual's success starts at a young age.<br> Here at Agoge we seek to educate  
+         and empower teens,<br> expanding their knowledge of web development<br> principles early in life. 
       </p>
     </span>
   </div>
   <div id="EventsArea" >
-   <div class="buffer"></div>
-    <div id="EventsArea" >
-      <div class="row events_body_background ">
-        <div class="col-md-10 col-md-offset-2">
-          <% @events.each do |event| %> 
-            <div class="col-md-5 ">
-              <%= render partial: 'events/display_events_home', locals: {:event => event} %> 
-            </div>
-          <% end %>
-        </div>
-      </div>
+    <div class="buffer"></div>
+      <%= render partial: 'events/event_panels', locals: {events: @events} %>
     </div>
   </div>
 </div>

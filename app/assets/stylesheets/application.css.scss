@@ -1,10 +1,13 @@
-/*
- *= require_tree .
- *= require_self
- */
-
 @import "bootstrap-sprockets";
 @import "bootstrap";
+@import "answers";
+@import "charges";
+@import "events";
+@import "learn";
+@import "questions";
+@import "static_pages";
+@import "users";
+
 @font-face {
   font-family: 'ProximaNova';    
    src:font-url('ProximaNova/Proxima-Nova-Regular.otf');
@@ -238,9 +241,12 @@ width: 100%;
 }
 
 .fa-pencil {
-  color: #354052;
+  color: silver;
 }
 
+.fa-pencil:hover {
+  color: tomato;
+}
 .fa-trash {
   color: silver;
 } 
@@ -318,9 +324,9 @@ width: 100%;
 .events_body_background {
   background-color: #f2f2f2;
   padding-top: 30px;
-  padding-bottom: 100px;
+  padding-bottom: 0px;
   margin-right: 0;
-  margin-bottom: -75px;
+  margin-bottom: 0px;
 }
 
 .events_style {
@@ -376,8 +382,8 @@ width: 100%;
   color: white;
   height: 50px;
   width: 300px;
-  margin-left: 13%;
   padding-top: 12px;
+  margin-top: 10px;
   border-style: none;
     &:hover {
       background-color: #f12c05;
@@ -508,13 +514,14 @@ width: 100%;
 /* FACEBOOK TWITTER LIKE/SHARE */
 
 .fb-like {
-  margin-left: 13%;
-  margin-top: 15px;
+  float: left;
+  padding-top: 14px;
+  padding-right: 4px;
 }
 
 .tweet {
-  margin-left: 150px;
-  margin-top: -20px;
+  float: left;
+  padding-top: 14px;
 }
 
 /* LEARN */
@@ -592,4 +599,10 @@ width: 100%;
     left: 0;
     width: 100%;
     height: 100%;
+}
+
+// Modal Overrides
+
+.modal-content {
+  margin-top: 20%;
 }

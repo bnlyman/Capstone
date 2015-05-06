@@ -1,6 +1,76 @@
 // Place all the styles related to the Events controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.blank-event-panel {
+  width: 400px;
+  height: 2px;
+}
+
+.event-panel {
+  .panel {
+    width: 400px;
+    height: 520px;
+  }
+
+  .panel-body {
+    padding: 0px;
+
+    h3 {
+      font-family: 'Archer';
+      color: #6f6f6f;
+    }
+
+    .image-line {
+      margin-top: -10px;
+      margin-bottom: 10px;
+    }
+
+    .description {
+      height: 100px;
+      margin-bottom: 5px;
+      overflow: scroll;
+      font-family: "ProximaNova";
+      color: #acacac;
+    }
+
+    .date {
+      font-weight: bold;
+      color: #6f6f6f;
+    }
+
+    .content {
+      padding: 15px 50px 15px 50px;
+      text-align: left;
+    } 
+  } 
+}
+
+.panel-col {
+  display: inline-block;
+}
+
+.panel-col-left {
+  margin-right: 40px;
+}
+
+.event-panel p {
+  text-align: left;
+  color: black;
+}
+
+.event-panel p:hover {
+  color: black; 
+}
+
+.event-panel h3 {
+  text-align: left;
+  color: black;
+}
+
+.event-panel a:hover {
+  text-decoration: none;
+}
+
 
 
 #events-btn-space {
@@ -38,4 +108,8 @@
 
 .events_index a:hover {
   text-decoration: none;
+}
+
+.edit-event-buttons {
+  margin-top: 5px;
 }

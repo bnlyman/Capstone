@@ -5,17 +5,10 @@
   </div> 
 </div>
 
-<div class="row events_body_background ">
-  <div class="col-md-10 col-md-offset-2">
-    <% @events.each do |event| %>
-    <div class="col-md-5 ">
-      <div id="event-<%= event.id %>">
-        <%= render partial: 'display_events', locals: {:event => event} %> 
-      </div>
-    </div>  
-    <% end %>
-  </div>
-</div>
+<%= render partial: 'event_panels', locals: { events: @events } %>
 
 <%= render partial: 'events_modal' %>
+
 <%= render 'events/gmaps_scripts' %>
+
+<%= render 'events_modal' %>

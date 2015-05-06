@@ -1,4 +1,4 @@
   console.log('Its working');
-$('#edit-events-holder').html('<%= j render partial: 'events_edit_modal', locals: { :event => @event } %>');
-$('#eventEditTitle').html('Edit Event');
-$('#eventEditModal').modal('show');
+$('#eventModalBody').html('<%= j render partial: "events_form", locals: { :event => @event } %>');
+$('#eventModalLabel').html('Edit Event');
+$('#eventModal').modal('show');

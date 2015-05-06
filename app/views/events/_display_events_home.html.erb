@@ -1,6 +1,6 @@
 <%= link_to event_path(event), remote: true do %>
-  <div class="block-update-card status events_style">
-    <div class="update-card-body">
+  <div class="panel panel-default event-panel">
+    <div class="panel-body">
       <%= image_tag(event.image.url(:med)) %>
       <h3><%= event.title.capitalize %></h3>
       <div id="events-image-line" ><%= image_tag('hrulegray.png') %></div>

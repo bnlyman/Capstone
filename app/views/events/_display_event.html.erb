@@ -1,5 +1,5 @@
 <div class="row">
-	<div class="col-md-5">	
+	<div class="col-md-5 col-sm-5">	
 		<p><b>When: </b><%= event.datetime.strftime("%B %d, %Y - %I:%M %P") %></p>
 		<p><b>Where: </b><%= event.address %><p>
 		<p><b>Cost: </b>$<%= event.cost %></p>
@@ -8,19 +8,21 @@
 		<p><%= event.description %></p>
 		<% if user_signed_in? %>
 			<% if event.users.exclude?(current_user) && current_user != event.owner %>
-			  <button class="btn btn-default forum-btn"><%= link_to "Enroll", new_charge_path(event_id: event.id) %></button> 
+				<% if event.users.count == event.total_spots %>
+					<p>Sorry, no more spots left!<p>
+				<% else %>
+					<%= link_to new_charge_path(event_id: event.id) do %>
+				  <button class="btn btn-default forum-btn">Enroll</button> 
+				  <% end %>
+				<% end %>
 			<% elsif event.users.include?(current_user) %>
-				<div class="panel panel-default post-panel">
-					<div class="panel-body post-panel-body enrolled">
-						You are enrolled in this event!
-					</div>
-				</div>
+				<p>You are enrolled in this event!</p>
 			<% end %>
 		<% else %>
 			<%= link_to "Sign up to enroll in events!", root_url, class: "btn btn-default forum-btn" %>
 		<% end %>
 	</div>
-	<div class="col-md-5">
+	<div class="col-md-5 col-sm-4">
 	  <div id="map" ></div>
 	</div>
 </div>

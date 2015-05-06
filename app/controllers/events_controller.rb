@@ -24,7 +24,7 @@ class EventsController < ApplicationController
   end
 
   def edit
-    if current_user == @event.owner || current_user.admin?
+    if current_user.admin?
       respond_to do |format|
         format.html
         format.js
@@ -78,14 +78,19 @@ class EventsController < ApplicationController
   end
 
   def enroll
-    @event.users << @user
-    if @event.valid?
-      redirect_to root_path
-      flash[:success] = "You are enrolled in #{@event.title}"
+    if @event.total_spots == @event.users.count
+      flash[:danger] = "Sorry, there aren't anymore spots available in the event: '#{@event.title}'."
+      redirect_to root_url
     else
-      @event.users.delete @user
-      redirect_to root_path
-      flash[:danger] = @event.errors.full_messages
+      @event.users << @user
+      if @event.valid?
+        redirect_to root_path
+        flash[:success] = "You are enrolled in #{@event.title}"
+      else
+        @event.users.delete @user
+        redirect_to root_path
+        flash[:danger] = @event.errors.full_messages
+      end
     end
   end
 

@@ -3,11 +3,13 @@
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <button type="button" class="close close-edit-modal" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <button type="button" class="close close-edit-modal" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
         <h4 class="modal-title" id="eventEditTitle">New Event</h4>
       </div>
-      <div id="eventEditModalbody" class="modal-body">
-        <%= render partial: 'events/events_form', locals: { :event => @event } %>
+      <div id="eventEditModalBody" class="modal-body">
+ 
       </div>
     </div>
   </div>

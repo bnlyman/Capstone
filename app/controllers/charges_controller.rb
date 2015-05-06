@@ -4,9 +4,17 @@ class ChargesController < ApplicationController
 	before_action :verify_user
 
 	def new
+		if @event.total_spots == @event.users.count
+      flash[:danger] = "Sorry, there aren't anymore spots available in the event: '#{@event.title}'."
+      redirect_to root_url
+    end
 	end
 
 	def create
+		if @event.total_spots == @event.users.count
+      flash[:danger] = "Sorry, there aren't anymore spots available in the event: '#{@event.title}'."
+      redirect_to root_url
+    end
 	  # Amount in cents
 	  @amount = @event.cost * 100
 
