@@ -12,7 +12,10 @@
   font-family: 'ProximaNova';    
    src:font-url('ProximaNova/Proxima-Nova-Regular.otf');
 }
-
+@font-face {
+  font-family: 'ProximaNovaBlack';    
+   src:font-url('ProximaNova/Proxima-Nova-Black.otf');
+}
 @font-face {
   font-family: 'Archer';
    src:font-url('Archer/Archer-Book-Pro.otf'),
@@ -28,7 +31,6 @@ h6,
 p {
   font-family: "ProximaNova";
 }
-
 
 /****** HTML ******/
 
@@ -548,6 +550,7 @@ width: 100%;
 }
 
 /* CONTACT */
+
 
 .contact-header {
   text-align: center;
